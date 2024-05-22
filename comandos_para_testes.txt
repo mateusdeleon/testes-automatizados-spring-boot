@@ -1,0 +1,20 @@
+### Testes unitários e integração ###
+./mvnw clean verify
+
+### Testes unitários ###
+./mvnw clean test
+./mvnw clean verify -DskipITs=true
+
+### Testes integração ###
+./mvnw clean verify -Dsurefire.skup=true
+
+### Testes de Cobertura ###
+- plugin Jacoco
+./mvnw clean test jacoco:report
+
+### Testes Mutantes ###
+- plugin Pitest
+./mvnw clean test-compile org.pitest:pitest-maven:mutationCoverage
+
+###  ###
+
